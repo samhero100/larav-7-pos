@@ -53,14 +53,6 @@
                 <li><a href="{{ route('dashboard.ordersuppliers_return.index') }}"><i class="fa fa-th"></i><span>@lang('site.orders_suppliers_return')</span></a></li>
             @endif
 
-            @if (auth()->user()->hasPermission('read_tags'))
-                <li><a href="{{ route('dashboard.tags.index') }}"><i class="fa fa-th"></i><span>@lang('site.tags')</span></a></li>
-            @endif
-
-            @if (auth()->user()->hasPermission('read_posts'))
-            <li><a href="{{ route('dashboard.posts.index') }}"><i class="fa fa-th"></i><span>@lang('site.posts')</span></a></li>
-        @endif
-
 
             {{--<li><a href="{{ route('dashboard.categories.index') }}"><i class="fa fa-book"></i><span>@lang('site.categories')</span></a></li>--}}
             {{----}}

@@ -126,15 +126,6 @@ return [
 
 
     ],
-    'tags' => 'Tags',
-    'all_tags' => 'All Tags',
-    'tag' => 'Tag',
-
-    'posts' => 'Subjects',
-    'all_posts' => 'All Subjects',
-    'post' => 'Subject',
-    'related_posts' => ' Related Subjects',
-    'posts_count' => 'Subjects Count',
 
 
     'stores' => 'Stores',

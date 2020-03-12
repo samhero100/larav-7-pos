@@ -13,11 +13,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
         
     
-            //tags routes
-            Route::resource('tags', 'TagController')->except(['show']);
-          
-            //posts routes
-            Route::resource('posts', 'PostController')->except(['show']);
 
 
             //product routes
