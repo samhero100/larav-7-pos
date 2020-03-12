@@ -46,11 +46,7 @@
                                $models = [
 
                                              'products',
-                                            'mony_items',
-                                             'mony_item_groups',
-                                             'mony_item_kinds',
                                              'stores',
-                                             'mony_stocks',
 
                                             'categories',
                                            
@@ -62,7 +58,6 @@
                                              'orders_suppliers_return',
 
 
-                                             'expense',
                                            
                                             'roles',
                                            'users',
@@ -70,14 +65,6 @@
                                            // 'posts',
                                            
                                              
-                            ];
-                            $models_1 =[
-                                'sales_reports',
-                                            'purch_reports',
-                                            'prod_reports',
-                                            'mony_reports',
-                                            'finance_reports',
-
                             ];
 
                                     $maps = ['create', 'read', 'update', 'delete'];
@@ -100,33 +87,6 @@
 
                                             @foreach ($maps as $map)
                                                 <label><input type="checkbox" name="permissions[]" value="{{ $map . '_' . $model }}"> @lang('site.' . $map)</label>
-
-
-                                            @endforeach
-
-                                            </div>
-                                            </td>
-
-                                    </tr>
-                                   @endforeach
-                                                  </table>
-                 
-                                </ul>
-                                <ul class="nav ">
-                                <table class="table table-hover">
-
-          
-                                    @foreach ($models_1 as $index=>$model_1)
-                                    <tr>
-                                    <td>
-                                          <li class="form-group {{ $index == 0 ? 'active' : '' }}">@lang('site.' . $model_1)</li>
-                                          </td>
-                                          <td>
-
-                                        <div class="form-group  {{ $index == 0 ? 'active' : '' }}" id="{{ $model_1}}">
-
-                                            @foreach ($mapss as $mapp)
-                                                <label><input type="checkbox" name="permissions[]" value="{{ $mapp . '_' . $model_1}}"> @lang('site.' . $mapp)</label>
 
 
                                             @endforeach

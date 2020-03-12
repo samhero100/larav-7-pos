@@ -45,9 +45,9 @@ class RoleController extends Controller
             'permissions' => 'required|min:1'
         ]);
 
-        $request_data = $request;
+        $request_data = $request->all();
 
-
+        //dd($request_data->permissions);
         $role = role::create($request_data);
         $role->syncPermissions($request->permissions);
 
@@ -68,10 +68,10 @@ class RoleController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'permissions' => 'required|min:1'
+             'permissions' => 'required|min:1'
         ]);
 
-        $request_data = $request;
+        $request_data = $request->all();
 
 
         $role->update($request_data);

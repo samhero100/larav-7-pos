@@ -46,11 +46,7 @@
                                $models = [
 
                                              'products',
-                                            'mony_items',
-                                             'mony_item_groups',
-                                             'mony_item_kinds',
                                              'stores',
-                                             'mony_stocks',
 
                                             'categories',
                                            
@@ -63,7 +59,6 @@
                                              'orders_suppliers_return',
 
 
-                                             'expense',
                                            
                                             'roles',
                                            'users',
@@ -73,11 +68,6 @@
                                              
                             ];
                             $models_1 =[
-                                'sales_reports',
-                                            'purch_reports',
-                                            'prod_reports',
-                                            'mony_reports',
-                                            'finance_reports',
 
                             ];
 
