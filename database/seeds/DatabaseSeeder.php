@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
       //  DB::disableForeignKeyCheck();
 
        $this->call(LaratrustSeeder::class);
-      $this->call(UsersTableSeeder::class);
+      //$this->call(UsersTableSeeder::class);
      // $this->call(StoresTableSeeder::class);
 
     //    $this->call(CategoriesTableSeeder::class);
