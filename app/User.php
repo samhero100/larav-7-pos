@@ -57,9 +57,9 @@ class User extends Authenticatable
         return asset('uploads/user_images/' . $this->image);
 
     }//end of get image path
-    public function permissions()
+    public function roles()
     {
-        return $this->belongsToMany(Permission::class, 'permission_user');
+        return $this->belongsToMany(Role::class, 'role_user');
 
     }//end of products
 

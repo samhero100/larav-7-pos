@@ -53,8 +53,7 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>@lang('site.first_name')</th>
-                                <th>@lang('site.last_name')</th>
+                                <th>@lang('site.name')</th>
                                 <th>@lang('site.email')</th>
                                 <th>@lang('site.image')</th>
                                 @if (auth()->user()->hasPermission('update_users','delete_users'))
@@ -68,8 +67,7 @@
                             @foreach ($users as $index=>$user)
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
-                                    <td>{{ $user->first_name }}</td>
-                                    <td>{{ $user->last_name }}</td>
+                                    <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td><img src="{{ $user->image_path }}" style="width: 100px;" class="img-thumbnail" alt=""></td>
                                     <td>

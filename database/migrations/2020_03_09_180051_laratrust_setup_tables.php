@@ -42,7 +42,7 @@ class LaratrustSetupTables extends Migration
         Schema::create('role_user', function (Blueprint $table) {
             $table->unsignedInteger('role_id');
             $table->unsignedInteger('user_id');
-            $table->string('user_type');
+            $table->string('user_type')->default('App\User');
             $table->unsignedInteger('team_id')->nullable();
 
             $table->foreign('role_id')->references('id')->on('roles')

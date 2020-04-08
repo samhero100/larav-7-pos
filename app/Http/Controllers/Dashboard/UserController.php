@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\User;
+use App\Role;
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
@@ -23,26 +25,26 @@ class UserController extends Controller
 
     public function index(Request $request)
     {
-        // $users = User::whereRoleIs('admin')->where(function ($q) use ($request) {
-            $users = User::where(function ($q) use ($request) {
+        $users = User::whereRoleIs('user')->where(function ($q) use ($request) {
+       // $users = User::where(function ($q) use ($request) {
 
             return $q->when($request->search, function ($query) use ($request) {
 
-                return $query->where('first_name', 'like', '%' . $request->search . '%')
-                    ->orWhere('last_name', 'like', '%' . $request->search . '%');
+                return $query->where('name', 'like', '%' . $request->search . '%');
 
             });
-
-        })->latest()->paginate(5);
+                dd($users);
+        })->latest()->paginate(25);
 
         return view('dashboard.users.index', compact('users'));
 
     }//end of index
 
-    public
-    function create()
+    public function create()
     {
-        return view('dashboard.users.create');
+                $roles = Role::all();
+
+        return view('dashboard.users.create', compact('roles'));
 
     }//end of create
 
@@ -50,12 +52,10 @@ class UserController extends Controller
     function store(Request $request)
     {
         $request->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
+            'name' => 'required',
             'email' => 'required|unique:users',
             'image' => 'image',
             'password' => 'required|confirmed',
-            'permissions' => 'required|min:1'
         ]);
 
         $request_data = $request->except(['password', 'password_confirmation', 'permissions', 'image']);
@@ -74,8 +74,8 @@ class UserController extends Controller
         }//end of if
 
         $user = User::create($request_data);
-        $user->attachRole('admin');
-        $user->syncPermissions($request->permissions);
+        // $user->attachRole('admin');
+        $user->syncRoles($request->roles);
 
         session()->flash('success', __('site.added_successfully'));
         return redirect()->route('dashboard.users.index');
@@ -85,7 +85,9 @@ class UserController extends Controller
     public
     function edit(User $user)
     {
-        return view('dashboard.users.edit', compact('user'));
+                        $roles = Role::all();
+
+        return view('dashboard.users.edit', compact('user','roles'));
 
     }//end of user
 
@@ -93,11 +95,9 @@ class UserController extends Controller
     function update(Request $request, User $user)
     {
         $request->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
+            'name' => 'required',
             'email' => ['required', Rule::unique('users')->ignore($user->id),],
             'image' => 'image',
-            'permissions' => 'required|min:1'
         ]);
 
         $request_data = $request->except(['permissions', 'image']);
@@ -121,8 +121,8 @@ class UserController extends Controller
         }//end of external if
 
         $user->update($request_data);
+        $user->syncRoles($request->roles);
 
-        $user->syncPermissions($request->permissions);
         session()->flash('success', __('site.updated_successfully'));
         return redirect()->route('dashboard.users.index');
 
