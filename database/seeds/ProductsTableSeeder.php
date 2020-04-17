@@ -33,7 +33,7 @@ class ProductsTableSeeder extends Seeder
             ]);
         }
 
-        for($i = 0; $i < 100000; $i++) {
+        for($i = 0; $i < 1000; $i++) {
             App\Product::create([
                  'category_id' => $faker->numberBetween($min = 1, $max = 100),
                 'ar' => ['name' => 'صنف'.$faker->name, 'description' => 'وصف'.$faker->name],
@@ -43,7 +43,7 @@ class ProductsTableSeeder extends Seeder
             ]);
         }
 
-        for($i = 0; $i < 100000; $i++) {
+        for($i = 0; $i < 1000; $i++) {
             App\ProductStore::create([
                  'product_id' => $faker->numberBetween($min = 1, $max = 100000),
                  'store_id' => $faker->numberBetween($min = 1, $max = 100),

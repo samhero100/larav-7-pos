@@ -13,7 +13,7 @@ class ProsuctStore extends Migration
      */
     public function up()
     {
-        Schema::create('product_store', function (Blueprint $table) {
+        Schema::create('product_stores', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('product_id')->unsigned();
             $table->integer('store_id')->unsigned();
