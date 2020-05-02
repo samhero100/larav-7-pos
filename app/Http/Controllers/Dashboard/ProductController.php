@@ -93,13 +93,12 @@ class ProductController extends Controller
 
         if ($request->image) {
 
-            Image::make($request->image)
-                ->resize(300, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                })
-                ->save(public_path('uploads/product_images/' . $request->image->hashName()));
+         $image = $request['image'];
+         $imageName = $image->getClientOriginalName();
+         $destinationPath = public_path('uploads/product_images');
+         $image->move($destinationPath, $imageName);
 
-            $request_data['image'] = $request->image->hashName();
+         $request_data['image'] = $imageName;
 
         }//end of if
 
@@ -141,24 +140,41 @@ class ProductController extends Controller
 
         $request_data = $request->all();
 
-        if ($request->image) {
+        // if ($request->image) {
 
-            if ($product->image != 'default.png') {
+        //     if ($product->image != 'default.png') {
 
-                Storage::disk('public_uploads')->delete('/product_images/' . $product->image);
+        //         Storage::disk('public_uploads')->delete('/product_images/' . $product->image);
                     
-            }//end of if
+        //     }//end of if
 
-            Image::make($request->image)
-                ->resize(300, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                })
-                ->save(public_path('uploads/product_images/' . $request->image->hashName()));
+        //     Image::make($request->image)
+        //         ->resize(300, null, function ($constraint) {
+        //             $constraint->aspectRatio();
+        //         })
+        //         ->save(public_path('uploads/product_images/' . $request->image->hashName()));
 
-            $request_data['image'] = $request->image->hashName();
+        //     $request_data['image'] = $request->image->hashName();
 
-        }//end of if
-        
+        // }//end of if
+         if ($request->image) {
+
+         if ($post->image != 'default.png') {
+         $image_path = public_path(__DIR__ .'uploads/product_images/'.$post['image']);
+         if(File::exists($image_path)) {
+         unlink($image_path);
+         }
+
+         }//end of if
+
+         $image = $request['image'];
+         $imageName = $image->getClientOriginalName();
+         $destinationPath = public_path('uploads/product_images');
+         $image->move($destinationPath, $imageName);
+
+         $request_data['image'] = $imageName;
+
+         }//end of if
         $product->update($request_data);
         session()->flash('success', __('site.updated_successfully'));
         return redirect()->route('dashboard.products.index');
@@ -167,11 +183,11 @@ class ProductController extends Controller
 
     public function destroy(Product $product)
     {
-        if ($product->image != 'default.png') {
-
-            Storage::disk('public_uploads')->delete('/product_images/' . $product->image);
-
-        }//end of if
+         if ($post->image != 'default.png') {
+         $image_path = public_path(__DIR__ .'uploads/product_images/'.$post['image']);
+         if(File::exists($image_path)) {
+         unlink($image_path);
+         }
 
         $product->delete();
         session()->flash('success', __('site.deleted_successfully'));
