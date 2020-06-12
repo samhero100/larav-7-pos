@@ -90,7 +90,7 @@ php artisan key:generate
 ```
 ## License
 
-> Copyright (C) 2019 Intelligo Systems.  
+> Copyright (C) 2020 Intelligo Systems.  
 > In this project is open-sourced software licensed under the [MIT](https://opensource.org/licenses/MIT) license.  
 > (See the [LICENSE](https://github.com/intelligo-systems/laravel-ecommerce/blob/master/LICENSE) file for the whole license text.)
 
