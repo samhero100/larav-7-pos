@@ -63,7 +63,7 @@ Install Nodejs
 
 NPM dependencies
 ```
-npm install
+npm install && npm run dev
 ```
 
 Using Laravel Mix 
