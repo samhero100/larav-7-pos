@@ -1,28 +1,6 @@
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
-<p align="center">
-    <a href="https://github.com/intelligo-systems/laravel-ecommerce/issues">
-        <img src="https://img.shields.io/github/issues/intelligo-systems/laravel-ecommerce.svg"
-            alt="Issues"></a>
-     <a href="https://github.com/intelligo-systems/laravel-ecommerce/fork">
-        <img src="https://img.shields.io/github/forks/intelligo-systems/laravel-ecommerce.svg?style=social&label=Fork"
-            alt="Forks"></a>
-    <a href="https://github.com/intelligo-systems/laravel-ecommerce/stargazers">
-        <img src="https://img.shields.io/github/stars/intelligo-systems/laravel-ecommerce.svg?style=social&label=Stars"
-            alt="Stars"></a>
-    <a href="https://github.com/tortuvshin/">
-        <img src="https://img.shields.io/github/followers/tortuvshin.svg?style=social&label=Follow"
-            alt="Followers"></a>
-    <a href="https://raw.githubusercontent.com/opengineer/laravel-ecommerce/master/LICENSE">
-        <img src="https://img.shields.io/badge/license-MIT-blue.svg"
-            alt="LICENSE"></a>
-    <a href="https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D">
-        <img src="https://img.shields.io/twitter/url/https/github.com/topengineer/laravel-ecommerce.svg?style=social"
-            alt="Tweet"></a>
-	  <a href="http://hits.dwyl.io/intelligo-system/intelligo">
-    <img alt="Hits" src="http://hits.dwyl.io/intelligo-system/intelligo.svg">
- </a>
-</p>
+<p align="center"> <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a> <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a> <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a> <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a> </p>
 
 
 ## Laravel Ecommerce Platform
