@@ -59,22 +59,12 @@ This is a e-commerce platform I made mostly using Laravel 5.4
 - Ability to Ship to Multiple Addresses
 - Single step checkout for registered customers
 
-## Requirements
-
-	PHP >= 5.6.4
-	MySQL >= 5.7
-	OpenSSL PHP Extension
-	PDO PHP Extension
-	Mbstring PHP Extension
-	Tokenizer PHP Extension
-	XML PHP Extension
-
 ## Install
 
 Clone repo
 
 ```
-git clone https://github.com/intelligo-systems/laravel-ecommerce.git
+git clone https://github.com/intelligo-systems/laravel-7-pos.git
 ```
 
 Install Composer
