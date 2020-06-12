@@ -88,15 +88,6 @@ Generating a New Application Key
 ```
 php artisan key:generate
 ```
-
-## Contributors
-
-You may contribute in several ways like creating new features, fixing bugs, improving documentation and examples
-or translating any document here to your language. [Find more information in CONTRIBUTING.md](CONTRIBUTING.md).
-<a href="https://github.com/intelligo-systems/laravel-ecommerce/graphs/contributors">Contributors</a>
-
-[![](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/images/0)](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/links/0)[![](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/images/1)](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/links/1)[![](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/images/2)](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/links/2)[![](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/images/3)](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/links/3)[![](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/images/4)](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/links/4)[![](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/images/5)](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/links/5)[![](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/images/6)](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/links/6)[![](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/images/7)](https://sourcerer.io/fame/tortuvshin/opengineer/laravel-ecommerce/links/7)
-
 ## License
 
 > Copyright (C) 2019 Intelligo Systems.  
